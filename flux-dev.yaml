@@ -11,6 +11,6 @@ spec:
     size: small
   sync:
     kind: GitRepository
-    url: "https://github.com/TimotheeRen/backstage-portal"
+    url: "https://github.com/TimotheeRen/envoy-lab"
     ref: "refs/heads/main"
     path: "fluxcd/clusters/dev"

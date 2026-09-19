@@ -9,9 +9,6 @@ dev:
 delete:
 	k3d cluster delete Lab
 
-forward:
-	kubectl port-forward svc/backstage-postgres-cluster-rw 5432:5432 &
-
 attach:
 	mkdir ~/.kube 2> /dev/null || true
 	sudo k3d kubeconfig get Lab > ~/.kube/config
