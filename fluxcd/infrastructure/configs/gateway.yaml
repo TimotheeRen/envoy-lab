@@ -7,5 +7,5 @@ spec:
   gatewayClassName: envoy-gateway
   listeners:
     - name: http
-      protocl: HTTP
+      protocol: HTTP
       port: 80
