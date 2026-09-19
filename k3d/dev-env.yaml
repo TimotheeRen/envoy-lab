@@ -12,6 +12,3 @@ options:
         nodeFilters: [server:*]
       - arg: --disable=servicelb
         nodeFilters: [server:*]
-  values:
-    crds:
-      enabled: false
