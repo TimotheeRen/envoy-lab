@@ -1,8 +1,6 @@
 dev:
 	k3d cluster create --config k3d/dev-env.yaml \
         --port "8080:30080@loadbalancer"
-	mkdir -p ~/.kube
-	k3d kubeconfig get Lab > ~/.kube/config
 	helm install flux-operator oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator \
 	  --namespace flux-system \
 	  --create-namespace
