@@ -4,6 +4,8 @@ metadata:
   name: nginx
   namespace: default
 spec:
+  parentRefs:
+    - name: envoy-gateway
   rules:
     - backendRefs:
         - kind: Service
