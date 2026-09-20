@@ -1,0 +1,17 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: GRPCRoute
+metadata:
+  name: grpc
+  namespace: default
+spec:
+  parentRefs:
+    - name: envoy-gateway
+  rules:
+    - backendRefs:
+        - kind: Service
+          name: grpc
+          port: 50051
+          weight: 1
+      matches:
+        - method:
+            service: service.Service
