@@ -9,7 +9,13 @@
 {
   env.GREET = "devenv";
 
-  packages = [ pkgs.git ];
+  packages = [ 
+    pkgs.k3d 
+    pkgs.kubernetes-helm
+    pkgs.fluxcd
+    pkgs.kubectl
+    pkgs.k9s
+  ];
 
   languages.rust = {
     enable = true;
